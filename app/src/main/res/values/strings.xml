@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Conversor de Unidades</string>
+    <string name="DE">DE:</string>
+    <string name="A">A:</string>
+    <string name="calcular">Calcular</string>
+    <string name="respuesta">Respuesta:</string>
+    <string name="cantidad">cantidad</string>
+    <string-array name="conversorMonedas">
+        <item>Dolar</item>
+        <item>Colon SV</item>
+        <item>Quetzal</item>
+        <item>Lempira</item>
+        <item>Cordoba</item>
+        <item>Yen</item>
+        <item>libra esterlina</item>
+        <item>Peso mexicano</item>
+        <item>Dolar canadiense</item>
+        <item>Corona sueca</item>
+    </string-array>
+    <string-array name="longitud">
+        <item>Metros</item>
+        <item>Centimetros</item>
+        <item>Milimetros</item>
+        <item>Pulgadas</item>
+        <item>Pies</item>
+        <item>Kilometros</item>
+        <item>Yarda</item>
+        <item>Milla</item>
+        <item>Milla Nautica</item>
+        <item>Nanometro</item>
+    </string-array>
+    <string-array name="masa">
+        <item>libra</item>
+        <item>Kilo</item>
+        <item>Kilogramo</item>
+        <item>Tonelada</item>
+        <item>gramo</item>
+        <item>Onza</item>
+        <item>decagramo</item>
+        <item>decigramo</item>
+        <item>KiloTonelada</item>
+        <item>Hectogramo</item>
+    </string-array>
+
+</resources>
