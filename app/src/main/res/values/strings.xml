@@ -41,5 +41,59 @@
         <item>KiloTonelada</item>
         <item>Hectogramo</item>
     </string-array>
+    <string-array name = "almacenamiento">
+        <item>Bit</item>
+        <item>Byte</item>
+        <item>Kilobyte</item>
+        <item>Megabyte</item>
+        <item>Gigabyte</item>
+        <item>Terabyte</item>
+        <item>Petabyte</item>
+        <item>Exabyte</item>
+        <item>Zettabyte</item>
+        <item>Yottabyte</item>
+    </string-array>
+
+    <string-array name="tiempo">
+        <item>Segundo</item>
+        <item>Minuto</item>
+        <item>Hora</item>
+        <item>Dia</item>
+        <item>Semana</item>
+        <item>Mes</item>
+        <item>Año</item>
+        <item>Decada</item>
+        <item>Siglo</item>
+        <item>Milenio</item>
+
+    </string-array>
+
+    <string-array name="temperatura">
+        <item>Kelvin</item>
+        <item>Celsius</item>
+        <item>Fahrenheit</item>
+
+    </string-array>
+
+    <string-array name="volumen">
+        <item>Kilómetro cúbico</item>
+        <item>Hectómetro cúbico</item>
+        <item>Decámetro cúbico</item>
+        <item>Metro cúbico</item>
+        <item>Decímetro cúbico</item>
+        <item>Centímetro cúbico</item>
+        <item>Milímetro cúbico</item>
+    </string-array>
+
+    <string-array name="area">
+        <item>Kilómetro cuadrado</item>
+        <item>Hectómetro cuadrado</item>
+        <item>Decámetro cuadrado</item>
+        <item>Metro cuadrado</item>
+        <item>Decímetro cuadrado</item>
+        <item>Centímetro cuadrado</item>
+        <item>Milímetro cuadrado</item>
+
+    </string-array>
 
 </resources>

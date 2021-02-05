@@ -26,9 +26,14 @@ public class MainActivity extends AppCompatActivity {
         tbhConversores = findViewById(R.id.tbhConversores);
         tbhConversores.setup();
 
-        tbhConversores.addTab(tbhConversores.newTabSpec("Monedas").setContent(R.id.Monedas).setIndicator("M"));
-        tbhConversores.addTab(tbhConversores.newTabSpec("Longitud").setContent(R.id.Longitud).setIndicator("L"));
-        tbhConversores.addTab(tbhConversores.newTabSpec("Masa").setContent(R.id.Masa).setIndicator("P"));
+        tbhConversores.addTab(tbhConversores.newTabSpec("Monedas").setContent(R.id.M).setIndicator("M"));
+        tbhConversores.addTab(tbhConversores.newTabSpec("Longitud").setContent(R.id.L).setIndicator("L"));
+        tbhConversores.addTab(tbhConversores.newTabSpec("Masa").setContent(R.id.Ma).setIndicator("P"));
+        tbhConversores.addTab(tbhConversores.newTabSpec("Almacenamiento").setContent(R.id.A).setIndicator("A"));
+        tbhConversores.addTab(tbhConversores.newTabSpec("Tiempo").setContent(R.id.T).setIndicator("T"));
+        tbhConversores.addTab(tbhConversores.newTabSpec("Temperatura").setContent(R.id.Tª).setIndicator("Tª"));
+        tbhConversores.addTab(tbhConversores.newTabSpec("Volumen").setContent(R.id.V).setIndicator("V"));
+        tbhConversores.addTab(tbhConversores.newTabSpec("Area").setContent(R.id.Ar).setIndicator("Ar"));
 
         btnConvertir = findViewById(R.id.btnCalcular);
         btnConvertir.setOnClickListener(new View.OnClickListener() {
