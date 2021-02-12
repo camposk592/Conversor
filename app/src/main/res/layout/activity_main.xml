@@ -122,7 +122,7 @@
                         android:text="@string/A" />
 
                     <Spinner
-                        android:id="@+id/cbo"
+                        android:id="@+id/cbo2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/De2"
@@ -131,20 +131,20 @@
                         android:layout_marginTop="20dp"
                         android:entries="@array/longitud" />
                     <EditText
-                        android:id="@+id/Cantidad2"
+                        android:id="@+id/txtCantidad2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="85dp"
                         android:inputType="number"/>
                     <TextView
-                        android:id="@+id/Respuesta2"
+                        android:id="@+id/lblRespuesta2"
                         android:text="@string/respuesta"
                         android:layout_marginTop="135dp"
                         android:layout_centerHorizontal="true"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <Button
-                        android:id="@+id/Calcular"
+                        android:id="@+id/btnCalcular2"
                         android:text="@string/calcular"
                         android:layout_marginTop="155dp"
                         android:layout_width="match_parent"
@@ -186,7 +186,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <EditText
-                        android:id="@+id/cantidad3"
+                        android:id="@+id/txtcantidad3"
                         android:layout_marginTop="85dp"
                         android:hint="Cantidad"
                         android:layout_width="match_parent"
@@ -240,7 +240,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <EditText
-                        android:id="@+id/cantidad4"
+                        android:id="@+id/txtcantidad4"
                         android:layout_marginTop="85dp"
                         android:hint="Cantidad"
                         android:layout_width="match_parent"
@@ -295,7 +295,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <EditText
-                        android:id="@+id/cantidad5"
+                        android:id="@+id/txtcantidad5"
                         android:layout_marginTop="85dp"
                         android:hint="Cantidad"
                         android:layout_width="match_parent"
@@ -350,7 +350,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <EditText
-                        android:id="@+id/cantidad6"
+                        android:id="@+id/txtcantidad6"
                         android:layout_marginTop="85dp"
                         android:hint="Cantidad"
                         android:layout_width="match_parent"
@@ -405,7 +405,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <EditText
-                        android:id="@+id/cantidad7"
+                        android:id="@+id/txtcantidad7"
                         android:layout_marginTop="85dp"
                         android:hint="Cantidad"
                         android:layout_width="match_parent"
@@ -459,7 +459,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <EditText
-                        android:id="@+id/cantidad8"
+                        android:id="@+id/txtcantidad8"
                         android:layout_marginTop="85dp"
                         android:hint="Cantidad"
                         android:layout_width="match_parent"

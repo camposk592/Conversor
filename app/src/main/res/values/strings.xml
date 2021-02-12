@@ -12,7 +12,7 @@
         <item>Lempira</item>
         <item>Cordoba</item>
         <item>Yen</item>
-        <item>libra esterlina</item>
+        <item>Libra esterlina</item>
         <item>Peso mexicano</item>
         <item>Dolar canadiense</item>
         <item>Corona sueca</item>
@@ -30,15 +30,15 @@
         <item>Nanometro</item>
     </string-array>
     <string-array name="masa">
-        <item>libra</item>
-        <item>Kilo</item>
-        <item>Kilogramo</item>
+        <item>Libra</item>
+        <item>Kilogramos</item>
+        <item>Quilates</item>
         <item>Tonelada</item>
         <item>gramo</item>
         <item>Onza</item>
-        <item>decagramo</item>
-        <item>decigramo</item>
-        <item>KiloTonelada</item>
+        <item>Decagramo</item>
+        <item>Decigramo</item>
+        <item>Piedra</item>
         <item>Hectogramo</item>
     </string-array>
     <string-array name = "almacenamiento">
@@ -76,23 +76,30 @@
     </string-array>
 
     <string-array name="volumen">
-        <item>Kilómetro cúbico</item>
-        <item>Hectómetro cúbico</item>
-        <item>Decámetro cúbico</item>
+        <item>Milimetro</item>
+        <item>Centimetro cubico</item>
+        <item>Litro</item>
         <item>Metro cúbico</item>
-        <item>Decímetro cúbico</item>
-        <item>Centímetro cúbico</item>
-        <item>Milímetro cúbico</item>
+        <item>Cucharaditas(EE.UU)</item>
+        <item>Tazas</item>
+        <item>Pintas</item>
+        <item>Cuartos de galon</item>
+        <item>Galones</item>
+        <item>Pulgadas cubicas</item>
+
     </string-array>
 
     <string-array name="area">
         <item>Kilómetro cuadrado</item>
-        <item>Hectómetro cuadrado</item>
-        <item>Decámetro cuadrado</item>
-        <item>Metro cuadrado</item>
-        <item>Decímetro cuadrado</item>
+        <item>Hectareas</item>
+        <item>Acres</item>
+        <item>Metros cuadrado</item>
+        <item>Yardas Cuadradas</item>
         <item>Centímetro cuadrado</item>
         <item>Milímetro cuadrado</item>
+        <item>Pulgadas Cuadradas</item>
+        <item>Pies cuadrados</item>
+        <item>Millas cuadradas</item>
 
     </string-array>
 
