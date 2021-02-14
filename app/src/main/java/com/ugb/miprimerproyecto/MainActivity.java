@@ -27,14 +27,14 @@ public class MainActivity extends AppCompatActivity {
         tbhConversores = findViewById(R.id.tbhConversores);
         tbhConversores.setup();
 
-        tbhConversores.addTab(tbhConversores.newTabSpec("Monedas").setContent(R.id.M).setIndicator("M"));
-        tbhConversores.addTab(tbhConversores.newTabSpec("Longitud").setContent(R.id.L).setIndicator("L"));
-        tbhConversores.addTab(tbhConversores.newTabSpec("Masa").setContent(R.id.Ma).setIndicator("P"));
-        tbhConversores.addTab(tbhConversores.newTabSpec("Almacenamiento").setContent(R.id.A).setIndicator("A"));
-        tbhConversores.addTab(tbhConversores.newTabSpec("Tiempo").setContent(R.id.T).setIndicator("T"));
-        tbhConversores.addTab(tbhConversores.newTabSpec("Temperatura").setContent(R.id.Tª).setIndicator("Tª"));
-        tbhConversores.addTab(tbhConversores.newTabSpec("Volumen").setContent(R.id.V).setIndicator("V"));
-        tbhConversores.addTab(tbhConversores.newTabSpec("Area").setContent(R.id.Ar).setIndicator("Ar"));
+        tbhConversores.addTab(tbhConversores.newTabSpec("Monedas").setContent(R.id.M).setIndicator("",getResources().getDrawable(R.drawable.ic_money_svg)));
+        tbhConversores.addTab(tbhConversores.newTabSpec("Longitud").setContent(R.id.L).setIndicator("",getResources().getDrawable(R.drawable.ic_longitud)));
+        tbhConversores.addTab(tbhConversores.newTabSpec("Masa").setContent(R.id.Ma).setIndicator("",getResources().getDrawable(R.drawable.ic_masa)));
+        tbhConversores.addTab(tbhConversores.newTabSpec("Almacenamiento").setContent(R.id.A).setIndicator("",getResources().getDrawable(R.drawable.ic_almacenamiento)));
+        tbhConversores.addTab(tbhConversores.newTabSpec("Tiempo").setContent(R.id.T).setIndicator("",getResources().getDrawable(R.drawable.ic_tiempo)));
+        tbhConversores.addTab(tbhConversores.newTabSpec("Temperatura").setContent(R.id.Tª).setIndicator("",getResources().getDrawable(R.drawable.ic_temperatura)));
+        tbhConversores.addTab(tbhConversores.newTabSpec("Volumen").setContent(R.id.V).setIndicator("",getResources().getDrawable(R.drawable.ic_volumen)));
+        tbhConversores.addTab(tbhConversores.newTabSpec("Area").setContent(R.id.Ar).setIndicator("",getResources().getDrawable(R.drawable.ic_area)));
 
         btnConvertir = findViewById(R.id.btnCalcular);
         btnConvertir.setOnClickListener(new View.OnClickListener() {
