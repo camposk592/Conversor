@@ -59,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
 
         });
         /*Calcular Longuitud*/
+        /*Puto el que lo encuentre/
+
+         */
         btnConvertir = findViewById(R.id.btnCalcular2);
         btnConvertir.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -194,6 +197,7 @@ public class MainActivity extends AppCompatActivity {
         
     }
 }
+
 
 class conversores{
     double[][] conversor = {
