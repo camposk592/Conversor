@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         tbhConversores = findViewById(R.id.tbhConversores);
         tbhConversores.setup();
 
-        tbhConversores.addTab(tbhConversores.newTabSpec("Monedas").setContent(R.id.M).setIndicator("",getResources().getDrawable(R.drawable.ic_money_svg)));
+        tbhConversores.addTab(tbhConversores.newTabSpec("Monedas").setContent(R.id.Agua).setIndicator("",getResources().getDrawable(R.drawable.ic_money_svg)));
         tbhConversores.addTab(tbhConversores.newTabSpec("Longitud").setContent(R.id.L).setIndicator("",getResources().getDrawable(R.drawable.ic_longitud)));
         tbhConversores.addTab(tbhConversores.newTabSpec("Masa").setContent(R.id.Ma).setIndicator("",getResources().getDrawable(R.drawable.ic_masa)));
         tbhConversores.addTab(tbhConversores.newTabSpec("Almacenamiento").setContent(R.id.A).setIndicator("",getResources().getDrawable(R.drawable.ic_almacenamiento)));
@@ -36,28 +36,7 @@ public class MainActivity extends AppCompatActivity {
         tbhConversores.addTab(tbhConversores.newTabSpec("Volumen").setContent(R.id.V).setIndicator("",getResources().getDrawable(R.drawable.ic_volumen)));
         tbhConversores.addTab(tbhConversores.newTabSpec("Area").setContent(R.id.Ar).setIndicator("",getResources().getDrawable(R.drawable.ic_area)));
 
-        btnConvertir = findViewById(R.id.btnCalcular);
-        btnConvertir.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    tempVal = (TextView)findViewById(R.id.txtcantidad);
-                    double cantidad = Double.parseDouble(tempVal.getText().toString());
 
-                    spnOpcionDe = findViewById(R.id.cboDe);
-                    spnOpcionA = findViewById(R.id.cboA);
-
-                    tempVal = findViewById(R.id.lblRespuesta);
-                    tempVal.setText( "Respuesta: "+ miConversor.convertir(0, spnOpcionDe.getSelectedItemPosition(),spnOpcionA.getSelectedItemPosition(), cantidad) );
-                }catch (Exception e){
-                    tempVal = findViewById(R.id.lblRespuesta);
-                    tempVal.setText("Por favor ingrese algun valor correspondiente");
-                    Toast.makeText(getApplicationContext(),"Por favor ingrese algun valor" ,Toast.LENGTH_SHORT).show();
-                }
-
-            }
-
-        });
         /*Calcular Longuitud*/
 
 

@@ -28,48 +28,17 @@
                 android:layout_height="match_parent">
 
                 <RelativeLayout
-                    android:id="@+id/M"
+                    android:id="@+id/Agua"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/lblDe"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/DE" />
-
-                    <Spinner
-                        android:id="@+id/cboDe"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="40dp"
-                        android:layout_marginLeft="40dp"
-                        android:entries="@array/conversorMonedas" />
-
-                    <TextView
-                        android:id="@+id/lblA"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/cboDe"
-                        android:layout_marginTop="20dp"
-                        android:text="@string/A" />
-
-                    <Spinner
-                        android:id="@+id/cboA"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/cboDe"
-                        android:layout_marginLeft="40dp"
-                        android:layout_marginTop="20dp"
-                        android:entries="@array/conversorMonedas" />
 
                     <EditText
                         android:id="@+id/txtcantidad"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/cboA"
                         android:layout_marginTop="51dp"
                         android:hint="Cantidad"
                         android:inputType="number" />
