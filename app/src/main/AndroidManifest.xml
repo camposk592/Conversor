@@ -15,10 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyPrimerProyecto"
         android:usesCleartextTraffic="true">
-        <activity android:name=".votar"></activity>
-        <activity android:name=".agregarpostulados" />
-        <activity android:name=".mostrarpostulados" />
-        <activity android:name=".registrorvotante" />
+        <activity android:name=".agregarvolunt" />
+        <activity android:name=".mostrarvolunt" />
+        <activity android:name=".registrorvolunt" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

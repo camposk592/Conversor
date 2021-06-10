@@ -14,7 +14,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.json.JSONObject;
 
-public class registrorvotante extends AppCompatActivity {
+public class registrorvolunt extends AppCompatActivity {
 
     FloatingActionButton btnregresar;
     String accion = "nuevo";

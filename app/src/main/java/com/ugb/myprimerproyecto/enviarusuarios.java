@@ -36,7 +36,7 @@ public class enviarusuarios extends AsyncTask<String, String, String> {
         BufferedReader bufferedReader;
 
         try{
-            URL url = new URL(uc.urlagregrdatosvotantes);
+            URL url = new URL(uc.urlagregardatos_US);
             urlConnection = (HttpURLConnection)url.openConnection();
             urlConnection.setDoInput(true);
             urlConnection.setDoOutput(true);

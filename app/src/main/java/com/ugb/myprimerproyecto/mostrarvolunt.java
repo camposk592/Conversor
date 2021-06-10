@@ -23,16 +23,15 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class mostrarpostulados extends AppCompatActivity {
+public class mostrarvolunt extends AppCompatActivity {
 
     TextView nombrel, duil;
     FloatingActionButton btnadd;
-    DB miconexion;
     ListView ltspostulados;
     Cursor datospostuladoscursor = null;
-    ArrayList<postulados> postuladosArrayList=new ArrayList<postulados>();
-    ArrayList<postulados> postuladosArrayListCopy=new ArrayList<postulados>();
-    postulados mispostulados;
+    ArrayList<volunt> voluntArrayList =new ArrayList<volunt>();
+    ArrayList<volunt> voluntArrayListCopy =new ArrayList<volunt>();
+    volunt mispo;
     JSONArray jsonArrayDatospostulados;
     JSONObject jsonObjectDatospostulados;
     utilidades u;
@@ -78,7 +77,7 @@ public class mostrarpostulados extends AppCompatActivity {
         parametros.putString("telefono", logtelefono);
         parametros.putString("mail", logmail);
         parametros.putString("padss", logpadss);
-        Intent i = new Intent(getApplicationContext(), agregarpostulados.class);
+        Intent i = new Intent(getApplicationContext(), agregarvolunt.class);
         i.putExtras(parametros);
         startActivity(i);
 
@@ -86,17 +85,17 @@ public class mostrarpostulados extends AppCompatActivity {
 
     private void obtenerDatos() {
         if(di.hayConexionInternet()) {
-            mensajes("Mostrando datos de votacion");
+            mensajes("Mostrando datos");
             obtenerDatosOnLine();
            } else {
-            mensajes("No se pudo conectar con la base");
+            mensajes("Acceso no permido a la base de datos");
             }
     }
 
     private void obtenerDatosOnLine() {
         try {
             ConexionconServer conexionconServer = new ConexionconServer();
-            String resp = conexionconServer.execute(u.urlmostrarpostulados, "GET").get();
+            String resp = conexionconServer.execute(u.urlmostrarvoluntarios, "GET").get();
             jsonObjectDatospostulados=new JSONObject(resp);
             jsonArrayDatospostulados = jsonObjectDatospostulados.getJSONArray("rows");
             mostrarDatos();
@@ -108,14 +107,14 @@ public class mostrarpostulados extends AppCompatActivity {
     private void mostrarDatos() {
         try{
             ltspostulados = findViewById(R.id.list);
-            postuladosArrayList.clear();
-            postuladosArrayListCopy.clear();
+            voluntArrayList.clear();
+            voluntArrayListCopy.clear();
             JSONObject jsonObject;
             if(di.hayConexionInternet()) {
                 if(jsonArrayDatospostulados.length()>0) {
                     for (int i = 0; i < jsonArrayDatospostulados.length(); i++) {
                         jsonObject = jsonArrayDatospostulados.getJSONObject(i).getJSONObject("value");
-                        mispostulados = new postulados(
+                        mispo = new volunt(
                                 jsonObject.getString("_id"),
                                 jsonObject.getString("_rev"),
                                 jsonObject.getString("nombre"),
@@ -125,14 +124,14 @@ public class mostrarpostulados extends AppCompatActivity {
                                 jsonObject.getString("urlfoto"),
                                 jsonObject.getString("urltriler")
                         );
-                        postuladosArrayList.add(mispostulados);
+                        voluntArrayList.add(mispo);
                     }}
             }
 
-            adaptadorImagenes adaptadorImagenes = new adaptadorImagenes(getApplicationContext(), postuladosArrayList);
+            adaptadorImagenes adaptadorImagenes = new adaptadorImagenes(getApplicationContext(), voluntArrayList);
             ltspostulados.setAdapter(adaptadorImagenes);
             registerForContextMenu(ltspostulados);
-            postuladosArrayListCopy.addAll(postuladosArrayList);
+            voluntArrayListCopy.addAll(voluntArrayList);
 
         }catch (Exception e){
             mensajes(e.getMessage());
@@ -171,9 +170,6 @@ public class mostrarpostulados extends AppCompatActivity {
                 case R.id.mxnEliminar:
                     Eliminar();
                     break;
-                case R.id.mxnVotar:
-                  votar("votar");
-                    break;
             }
         }catch (Exception ex){
             mensajes(ex.getMessage());
@@ -183,7 +179,7 @@ public class mostrarpostulados extends AppCompatActivity {
 
     private void Eliminar(){
         try {
-            AlertDialog.Builder confirmacion = new AlertDialog.Builder(mostrarpostulados.this);
+            AlertDialog.Builder confirmacion = new AlertDialog.Builder(mostrarvolunt.this);
             confirmacion.setTitle("Esta seguro de eliminar?");
 
                 jsonObjectDatospostulados = jsonArrayDatospostulados.getJSONObject(position).getJSONObject("value");
@@ -194,7 +190,7 @@ public class mostrarpostulados extends AppCompatActivity {
                 try {
                     if(di.hayConexionInternet()){
                         ConexionconServer objElimina = new ConexionconServer();
-                        String resp =  objElimina.execute(u.urlagregarpostulados +
+                        String resp =  objElimina.execute(u.urlagregarVoluntarios +
                                 jsonObjectDatospostulados.getString("_id")+ "?rev="+
                                 jsonObjectDatospostulados.getString("_rev"), "DELETE"
                         ).get();
@@ -243,7 +239,7 @@ public class mostrarpostulados extends AppCompatActivity {
                 mensajes(e.getMessage());
             }
         }
-        Intent i = new Intent(getApplicationContext(), agregarpostulados.class);
+        Intent i = new Intent(getApplicationContext(), agregarvolunt.class);
         i.putExtras(parametros);
         startActivity(i);
     }
@@ -268,8 +264,8 @@ public class mostrarpostulados extends AppCompatActivity {
                 mensajes(e.getMessage());
             }
         }
-        Intent i = new Intent(getApplicationContext(), votar.class);
-        i.putExtras(parametros);
-        startActivity(i);
+        //Intent i = new Intent(getApplicationContext(), votar.class);
+        //i.putExtras(parametros);
+        //startActivity(i);
     }
 }

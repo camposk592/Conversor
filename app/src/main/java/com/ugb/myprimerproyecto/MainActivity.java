@@ -5,24 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.EdgeEffect;
-import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.RadioButton;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.an.biometric.BiometricCallback;
 import com.an.biometric.BiometricManager;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements BiometricCallback {
 
@@ -49,12 +40,12 @@ public class MainActivity extends AppCompatActivity implements BiometricCallback
         });
 
         registro.setOnClickListener(v->{
-           Intent i = new Intent(getApplicationContext(), registrorvotante.class);
+           Intent i = new Intent(getApplicationContext(), registrorvolunt.class);
            startActivity(i);
         });
 
         new BiometricManager.BiometricBuilder(MainActivity.this)
-                .setTitle("VotoFacil")
+                .setTitle("DonacioneSV")
                 .setSubtitle("Identificate")
                 .setDescription("Por favor coloca tu huella en el sensor")
                 .setNegativeButtonText("Cancelar")
@@ -77,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements BiometricCallback
      try {
 
          ConexionconServer conexionconServer = new ConexionconServer();
-         String resp = conexionconServer.execute(u.urlobtenerdatosvotantes, "GET").get();
+         String resp = conexionconServer.execute(u.urlobteniendodatos_US, "GET").get();
          jsonObjectDatosvotantes=new JSONObject(resp);
          jsonArrayDatosvotantes = jsonObjectDatosvotantes.getJSONArray("rows");
 
@@ -100,17 +91,14 @@ public class MainActivity extends AppCompatActivity implements BiometricCallback
                             String mail = jsonObject.getString("correo");
                             String padss = jsonObject.getString("pass");
 
-                            mensajes("Bienvenido " + nombre);
-
-
-
+                            mensajes("Bienvenido " );
                             Bundle parametros = new Bundle();
                             parametros.putString("nombre", nombre);
                             parametros.putString("duii", duii);
                             parametros.putString("telefono", telefono);
                             parametros.putString("mail", mail);
                             parametros.putString("padss", padss);
-                            Intent lanzar = new Intent(getApplicationContext(), mostrarpostulados.class);
+                            Intent lanzar = new Intent(getApplicationContext(), mostrarvolunt.class);
                             lanzar.putExtras(parametros);
                             startActivity(lanzar);
 

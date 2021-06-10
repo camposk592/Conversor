@@ -30,7 +30,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.json.JSONObject;
 
-public class agregarpostulados extends AppCompatActivity {
+public class agregarvolunt extends AppCompatActivity {
     FloatingActionButton btnregresar;
     ImageView imgfoto;
     VideoView vdidep;
@@ -88,7 +88,7 @@ public class agregarpostulados extends AppCompatActivity {
             String dui = temp.getText().toString();
 
             temp = findViewById(R.id.txtpropuesta);
-            String propuesta = temp.getText().toString();
+            String pdonar = temp.getText().toString();
 
             temp = findViewById(R.id.txtotro);
             String otro = temp.getText().toString();
@@ -104,7 +104,7 @@ public class agregarpostulados extends AppCompatActivity {
 
             datoss.put("nombre",nombre);
             datoss.put("dui",dui);
-            datoss.put("propuesta",propuesta);
+            datoss.put("pdonar",pdonar);
             datoss.put("otro",otro);
             datoss.put("urlfoto",urldefoto);
             datoss.put("urltriler",urldevideo);
@@ -148,7 +148,7 @@ public class agregarpostulados extends AppCompatActivity {
                 temp.setText(datos.getString("dui"));
 
                 temp = findViewById(R.id.txtpropuesta);
-                temp.setText(datos.getString("propuesta"));
+                temp.setText(datos.getString("pdonar"));
 
                 temp = findViewById(R.id.txtotro);
                 temp.setText(datos.getString("otro"));
@@ -170,9 +170,9 @@ public class agregarpostulados extends AppCompatActivity {
 
     private void permisos() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
-            if (ActivityCompat.checkSelfPermission(agregarpostulados.this, Manifest.permission.READ_EXTERNAL_STORAGE)== PackageManager.PERMISSION_GRANTED){
+            if (ActivityCompat.checkSelfPermission(agregarvolunt.this, Manifest.permission.READ_EXTERNAL_STORAGE)== PackageManager.PERMISSION_GRANTED){
             }else {
-                ActivityCompat.requestPermissions(agregarpostulados.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},RPQ);
+                ActivityCompat.requestPermissions(agregarvolunt.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},RPQ);
             }
         }else {
         }
@@ -229,7 +229,7 @@ public class agregarpostulados extends AppCompatActivity {
         parametros.putString("telefono", logtelefono);
         parametros.putString("mail", logmail);
         parametros.putString("padss", logpadss);
-        Intent lanzar = new Intent(getApplicationContext(), mostrarpostulados.class);
+        Intent lanzar = new Intent(getApplicationContext(), mostrarvolunt.class);
         lanzar.putExtras(parametros);
         startActivity(lanzar);
 

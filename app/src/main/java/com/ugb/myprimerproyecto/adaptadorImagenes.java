@@ -13,11 +13,11 @@ import java.util.ArrayList;
 
 public class adaptadorImagenes extends BaseAdapter {
     Context context;
-    ArrayList<postulados> datospostuladosArrayList;
+    ArrayList<volunt> datospostuladosArrayList;
     LayoutInflater layoutInflater;
-    postulados mispostulados;
+    volunt mispostulados;
 
-    public adaptadorImagenes(Context context, ArrayList<postulados> datospostuladosArrayList) {
+    public adaptadorImagenes(Context context, ArrayList<volunt> datospostuladosArrayList) {
         this.context = context;
         this.datospostuladosArrayList = datospostuladosArrayList;
     }
